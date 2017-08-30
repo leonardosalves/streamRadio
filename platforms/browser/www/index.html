@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+	<meta charset="utf-8">
+	<style type="text/css">
+	
+		#playcontrols {
+			text-align: center;
+			margin-top: 50px;
+		}
+		#playcontrols #activityindicator, #playcontrols #stopbutton {
+			display: none;
+		}
+		
+		#textpositiondiv {
+			margin-top: 100px;
+		}
+	</style>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<script type="text/javascript" charset="utf-8" src="scripts/html5audio.js"></script>
+	<script type="text/javascript" charset="utf-8" src="scripts/bootstrap.min.js"></script>
+  </head>
+  <body>
+	  <div class="container">
+		  <div class="row">
+				<div class="col-md-12">
+					<img class="img-responsive" 
+					src="images/Arte-IPADMR-959px-L-122px-A.png" >
+				</div>	  
+		  </div>
+	  </div>
+  	  <div id="playcontrols">
+		<a href="#" id="playbutton" onClick="html5audio.play();return false;">
+				<i class="fa fa-3x fa-play" aria-hidden="true"></i>				
+		</a>
+		<a href="#" id="activityindicator" onClick="html5audio.stop();return false;">
+				<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+				<span class="sr-only">Loading...</span>
+		</a>
+		<a href="#" id="stopbutton" onClick="html5audio.stop();return false;">
+				<i class="fa fa-3x icon-large fa-stop" aria-hidden="true"></i>				
+		</a>
+		<div id="textpositiondiv"><i class="fa fa-clock-o" aria-hidden="true"></i>
+			<span id="textposition">parado</span></div>
+	  </div>
+	  <script type="text/javascript">
+	  	  html5audio.play();
+		  playButton = document.getElementById('playbutton');
+		  stopButton = document.getElementById('stopbutton');
+		  activityIndicator = document.getElementById('activityindicator');
+		  textPosition = document.getElementById('textposition');
+	  </script>
+  </body>
+</html>
